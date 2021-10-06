@@ -3,18 +3,17 @@ html
     head
         title= `${title}`
         link(rel='stylesheet' ,href='/css/bootstrap.css')
+        script(src="js/bootstrap.js")
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js")
+        script(src="js/logic.js")
 
     body
+    block nav
+    include login
+    include register
+    include addCustomer
+    main.container#allBrandings
+        h3.p-5 All Insertions
+        .container.mb-3.d-flex.flex-row.flex-wrap.justify-content-around
+            include brandingCard
 
-
-        main.container-md
-            article.row
-                section.col
-                    h1 My Amazing App
-                    block content
-                section.col
-                    h2 Fun is here
-                    block content
-                section.col
-                    h1 My Amazing App
-                    block content

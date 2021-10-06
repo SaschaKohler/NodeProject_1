@@ -1,0 +1,28 @@
+#addCustumerModal.modal.fade
+    .modal-dialog.rounded-2
+        .modal-content
+            .modal-header
+                h5.modal-title Add Customer
+                button.btn-close(
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    )
+            .modal-body
+                form#addCustomerForm(
+                    method="post"
+                    enctype="multipart/form-data"
+                    )
+                    .form-floating.mb-lg-2
+                        input.form-control#phoneNew(type="text")
+                        label.form-label(for="phoneNew")
+                    .form-floating.mb-lg-2
+                        input.form-control#addressNew(type="text")
+                        label.form-label(for="addressNew")
+                    .form-floating.mb-lg-2
+                        input.form-control#brandingNew(type="text")
+                        label.form-label(for="brandingNew")
+                    button.btn.btn-primary#addNewCustomerButton(type="button") Add new
+                    button.btn.btn-secondary(
+                        type="button"
+                        data-bs-dissmiss="modal"
+                        ) Cancel

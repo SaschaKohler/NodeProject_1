@@ -1,0 +1,58 @@
+#registerModal.modal.fade
+    .modal-dialog.rounded-2
+        .modal-content
+            .modal-header
+                h5.modal-titlte Register
+                button.btn-close(data-bs-dismiss="modal" aria-label="Close")
+            .modal-body
+                .alert.alert-danger#error-group-register(style="display:none")
+                    ul#errors-register
+                form#registerForm(
+                    action="."
+                    method="post"
+                    )
+                    .form-floating.mb-lg-2
+                        input.form-control(
+                            type="text"
+                            name="username"
+                            id="usernameForReg"
+                        )
+                        label.form-label(
+                            for="username"
+                        ) username
+                    .form-floating.mb-lg-2
+                        input.form-control(
+                            type="text"
+                            name="email"
+                            id="emailForReg"
+                        )
+                        label.form-label(
+                            for="email"
+                        ) email
+                    .form-floating.mb-lg-2
+                        input.form-control(
+                            type="text"
+                            name="password"
+                            id="passwordForReg"
+                        )
+                        label.form-label(
+                            for="password"
+                        ) password
+                    .form-floating.mb-lg-2
+                        input.form-control(
+                            type="text"
+                            name="passwordConfirm"
+                            id="passwordConfirm"
+                        )
+                        label.form-label(
+                            for="passwordConfirm"
+                        ) confirm password
+                    .modal-footer
+                        button#registerFormButton(
+                                class="btn btn-primary"
+                                type="submit"
+                            ) Register
+                        button.btn.btn-secondary(
+                                type="button"
+                                data-bs-dismiss="modal"
+                            ) Close

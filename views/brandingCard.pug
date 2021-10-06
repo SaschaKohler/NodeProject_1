@@ -1,0 +1,12 @@
+mixin fun(customer)
+    each val in customer
+        .card.mt-5.shadow-sm(style="width:400px")
+            .card-header #{val.branding}
+            .card-body
+                h5.card-title #{val.branding}
+                h5.card-subtitle #{val.address}
+                p.card-text.lh.sm This is a possible space for special branding description
+            .card-footer
+                p Introduced by: #{val.id} (#{val.username})
+
++fun(customer)

@@ -1,0 +1,31 @@
+extends layout
+
+block nav
+    nav.navbar.navbar-expand-lg.navbar-light.bg-warning
+        .container-fluid.justify-content-end
+            a.navbar-brand Customer Ticket 2021
+            button(
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+                )
+                span.navbar-toggler-icon
+
+            div.collapse.navbar-collapse#navbarSupportedContent
+                button(
+                    class="btn btn-success me-auto"
+                    data-bs-toggle="modal"
+                    data-bs-target="#loginModal"
+                    type="submit"
+                    value="Login"
+                ) Login
+
+                a(
+                href="#"
+                data-bs-toggle="modal"
+                data-bs-target="#registerModal"
+                class="link-dark ms-sm-2 me-sm-2"
+                ) Register

@@ -1,0 +1,41 @@
+#loginModal.modal.fade
+    .modal-dialog
+        .modal-content
+            .modal-header
+                h5.modal-title Login
+                button.btn-close(
+                    data-bs-dismiss="modal"
+                    aria-label="Close"
+                    )
+            .modal-body
+                .alert(class="alert-danger",role="alert",id="error-group-login",style="display:none")
+                   ul#errors-login
+                form#loginForm(action="." method="post" enctype="multipart/form-data")
+                    .form-message
+                    .form-floating.mb-sm-2
+                        input.form-control(
+                            type="text"
+                            name="username"
+                            id="username"
+                            )
+                        label.form-label(
+                            for="username"
+                            ) Username
+                    .form-floating.mb-sm-2
+                        input.form-control(
+                            type="password"
+                            name="password"
+                            id="password"
+                            )
+                        label.form-label(
+                            for="password"
+                            ) Password
+                    m.modal-footer
+                        a.link-dark.ms-sm-2(
+                            href="#"
+                            data-bs-toggle="modal"
+                            data-bs-target="#registerModal"
+                            ) Register
+                        button.btn.btn-primary#loginModalFormButton(
+                            type="submit"
+                            ) Submit
